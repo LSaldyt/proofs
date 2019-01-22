@@ -1,0 +1,34 @@
+\problem{Comic Logic}
+
+Consider the following assertions:
+
+\begin{enumerate}
+    \item All cats have four legs
+    \item I have four legs
+    \item I am a cat
+\end{enumerate}
+
+Are the assertions statements or predicates?
+Construct a truth table for ``If A and B, then C''
+Now consider the actual truth values of the assertions made by the dog. Cross out the lines of the truth table that don't apply \emph{in this particular instance}.
+
+\solution
+
+\part 
+
+\begin{tabular}{|r|r|r|r|}
+    \hline
+    Line & A & B & C & $(A \wedge B) \Rightarrow C$ \\
+    \hline
+    1 & T & T & T & T \\
+    2 & T & T & F & F \\
+    3 & T & F & T & T \\
+    4 & T & F & F & T \\
+    5 & F & T & T & T \\
+    6 & F & T & F & T \\
+    7 & F & F & T & T \\
+    8 & F & F & F & T \\
+    \hline
+\end{tabular}
+
+In reality, both A and B are true, but C is clearly not. Therefore, only the first line of the truth table is ``applicable'' to the scenario in a technical sence.

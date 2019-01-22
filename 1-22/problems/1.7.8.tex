@@ -1,0 +1,26 @@
+\problem{Negation Truth Tables}
+
+Construct a truth table showing wether the following are equal:
+
+\begin{itemize}
+    \item $\neg (A \wedge B)$
+    \item $\neg A \wedge \neg B$
+    \item $\neg (A \vee B)$
+    \item $\neg A \vee \neg B$
+\end{itemize}
+
+\solution
+
+\part 
+
+\begin{tabular}{ |r|r|r|r|r|r| }
+ \hline
+ $A$ & $B$ & $\neg (A \wedge B)$ & $\neg A \wedge \neg B$ & $\neg (A \vee B)$ & $\neg A \vee \neg B$ \\
+ T & T & F & F & F & F &
+ T & F & T & F & F & T &
+ F & T & T & F & F & T &
+ F & F & T & T & T & T &
+ \hline
+\end{tabular}
+
+Columns 3 and 6 are equal, as are columns 4 and 5.
