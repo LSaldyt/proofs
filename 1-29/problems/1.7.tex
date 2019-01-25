@@ -1,11 +1,21 @@
 \problem{Line creation proof}
 
-Suppose that (a, b) and (c, d) are two distinct points in R^2. Prove that there exists a unique line passing through the two points. 
-
-\solution
+ Suppose that $(a, b)$ and $(c, d)$ are two distinct points in $R^2$. Prove that there exists a unique line passing through the two points. 
+ 
+ \solution
 
 \part 
 
-A line is defined as a point and a slope, or $y = mx + e$ ($e$ is used to distinguish from $b$, which is already defined). 
-For a line to pass through (a, b) and (c, d), it must have a certain fixed slope and intercept, i.e. $b = ma + e$ and $c = md + e$. 
-These two equations give unique values for the line\ldots
+\begin{theorem}
+Given two distinct points $(a, b)$ and $(c, d)$ in $R^2$, there exists a unique line passing through the two points. 
+\end{theorem}
+
+\begin{proof}
+A line is defined as either $y = mx + n$ ($n$ is used to distinguish from $b$, which is already defined), or $x = l$, where $m$, $n$, and $l$ are real numbers.
+
+If $a = c$, then the line is vertical and takes the form $x = l$, where $l = a = c$.
+No other value of $l$ will work, because if another value for $l$ is chosen, then $l \neq a \neq c$ and therefore neither point is on the line.
+Therefore in this case the line is unique.
+
+If $a \neq c$, then the line takes the form $y = mx + n$. In this case, $m$ is defined as $\frac{(b - d)}{(a - c)}$, and $n$ is then solved for as $b = \frac{(b-d)}{(a-c)} * a + n$. This means that $n = b - \frac{(b-d)}{(a-c)} * a$. Since both $m$ and $n$, the defining variables of the line, are in terms of $a$, $b$, $c$, and $d$, the line is unique with respect to the points.
+\end{proof}

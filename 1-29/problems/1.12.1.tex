@@ -1,4 +1,4 @@
-\problem{1.12.1}
+\problem{Direct Proof}
 
 Use a direct proof to prove that ``If x + y is even and y + z is even, then x + z is even''.
 
@@ -6,8 +6,12 @@ Use a direct proof to prove that ``If x + y is even and y + z is even, then x + 
 
 \part 
 
+\begin{theorem}
+If x + y is even and y + z is even, then x + z is even.
+\end{theorem}
+\begin{proof}
 The definition of an even number is that the number is divisible by two such that $n = 2a$.
 By this definition, $x + y = 2a$ and $y + z = 2b$.
 So $x + y + y + z = 2a + 2b$, which simplifies to $x + z = 2(a + b - y)$.
 Since $a + b - y$ is just an integer (call it $c$), then $x + z = 2c$ and therefore $x + z$ is even.
-
+\end{proof}

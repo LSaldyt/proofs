@@ -1,0 +1,22 @@
+\problem{Tautology Proof}
+
+This question contained a typo. I believe that the right hand side of the statement should be $((A \Rightarrow C) \wedge (B \Rightarrow C))$, but was $((A \Rightarrow C) \vee (B \Rightarrow C))$.
+
+Prove that the following statement is a tautology:
+
+$((A \vee B) \Rightarrow C) \Leftrightarrow ((A \Rightarrow C) \wedge (B \Rightarrow C))$
+
+\solution
+
+\part 
+
+\begin{theorem}
+$((A \vee B) \Rightarrow C) \Leftrightarrow ((A \Rightarrow C) \vee (B \Rightarrow C))$ is a tautology.
+\end{theorem}
+
+\begin{proof}
+The left hand side $((A \vee B) \Rightarrow C)$ can be converted into $C \vee \neg (A \vee C)$ by rule nine (Absorption).
+Then, this can be transformed using DeMorgan's law: $C \vee (\neg A \wedge \neg B)$. 
+Further, by distributivity, the statement is broken apart: $(C \vee \neg A) \wedge (C \vee \neg B)$.
+Each side of the statement can again be turned into an implication, resulting in $(A \Rightarrow C) \wedge (B \Rightarrow C)$. 
+\end{proof}
