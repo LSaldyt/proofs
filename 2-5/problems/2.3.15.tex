@@ -1,0 +1,31 @@
+\problem{Indexing Sets}
+
+Let {$I_n$} where $n \in \mathbb{N}$ be the collection of intervals described in 2.3.11.
+
+\begin{itemize}
+    \item a. Find $\cup_{n \in \mathbb{N}}$.
+    \item b. Find $\cap_{n \in \mathbb{N}}$.
+    \item c. How would the answer be different if the intervals were closed intervals instead of open intervals?
+\end{itemize}
+
+Let ${C_t} \text{where} t \in R$ be circles described in Example 2.3.11
+
+\begin{itemize}
+    \item a. Find $\cup_{n \in \mathbb{R}}$.
+    \item b. Find $\cap_{n \in \mathbb{R}}$.
+\end{itemize}
+
+\solution
+
+\part 
+
+\begin{itemize}
+    \item a. Since later intervals are always subsets of the original interval (because they are more restricted intervals), the resultant set is simply $[0, 1]$, because set elements are unique. If the intervals were closed, the answer would be $(0, 1)$
+        \item b. Since later intervals are always subsets of the original interval (because they are more restricted intervals), the resultant intersection becomes smaller and smaller. Eventually, the set will become the interval $[0, 1/x]$ as $x$ approaches infinity. This is the set ${0}$. If the intervals were closed, the answer would be the empty set, $\varnothing$.
+    \item c. (Addressed above)
+\end{itemize}
+
+\begin{itemize}
+    \item a. Since the subscript $t$ is changing the $x$ location of the circle, the union of these will be the 2D space between $y = 1$ and $y = -1$.
+    \item b. Since for two elements in ${C_t}$ with a difference in $t$ of more than 1, no points will overlap, their intersection is the null set. The null set intersected with anything else is also the null set, so the total resultant set is the null set.
+\end{itemize}

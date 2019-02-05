@@ -1,0 +1,17 @@
+\problem{Powerset Union}
+
+Let $A$ and $B$ be sets, and $P()$ denote the powerset.
+
+\begin{enumerate}
+    \item Provide a counterexample to show that it is not necessarily true that $P(AUB) = P(A) U P(B)$.
+    \item Is it ever true that $P(AUB) = P(A) U P(B)$?
+\end{enumerate}
+
+\solution
+
+\part 
+
+\begin{enumerate}
+    \item Assume $A$ and $B$ are entirely separate sets, i.e. $a \in A and a \not\in B and b \in B \not\in A$. Then, the cardinality of $A$ union $B$ is the summation of the two, so $P(A\cupB)$ is $2^(|A| + |B|)$, but the cardinality of $P(A) \cup P(B)$ is $2^|A| + 2^|B| - 1$ because of the empty set produced by $P()$. Thus, these sets differ.
+    \item For a trivial case, let $A = \varnothing$ and $B = \varnothing$. This is perhaps vacuously true.
+\end{enumerate}
