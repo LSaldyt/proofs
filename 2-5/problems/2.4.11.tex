@@ -1,4 +1,4 @@
-\problem{Title}
+\problem{Set identities}
 
 Try proving the provided set identities.
 
@@ -6,4 +6,11 @@ Try proving the provided set identities.
 
 \part 
 
-Solution
+In a sense, 1 and 2 are applying DeMorgan's laws.
+
+\begin{enumerate}
+    \item $C \ (A \cup B) = (C \ A) \cap (C \ B)$. $c \in C and c \not\in A \cup B means \not(c \in A or c \in B)$, and by DeMorgan's law, this becomes $c \notin A and c \notin B but c \in C$.
+    \item $C \ (A \cap B) = (C \ A) \cup (C \ B)$. This uses the above method, but reverses ``and'' and ``or''.
+    \item $B \ (B \ A) = A \cap B$. This means every element $b$ in $B$ that is not also in $A$, and then further every element $b$ in $B$ that is not in ($B \ A$, previously defined). Thus this means all elements in both $A$ and $B$, thus the intersection of the two.
+    \item $(A \ B) \cup (B \ A) = (A \cup B) \ (A \cap B)$. This is showing distributivity. Specifically, we are considering the set of all elements either where each is in $A$ but not in $B$, or is in $B$ but not in $A$. Thus, this is the union of both sets, except for the elements in both sets (the intersection set).
+\end{enumerate}
