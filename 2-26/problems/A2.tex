@@ -1,9 +1,25 @@
-\problem{Title}
+\problem{A2}
 
-Problem
+Let $F_i$ be the fibonacci numbers.
+Use complete induction to prove that $F_n \geq \alpha^{n - 2}$ for all $n \geq 1$ where $\alpha = (1 + \sqrt{5})/2$.
 
 \solution
 
 \part 
 
-Solution
+\begin{theorem}
+The formula $F_n \geq \alpha^{n−2}$ is true for all $n \geq 1$ where $\alpha = (1 + \sqrt{5})/2$.
+\end{theorem}
+
+\begin{proof}
+First consider the base cases $n = 1$ and $n = 2$. First, $F_1 = 1$ and $F_2 = 2$. 
+For $n = 1$, $\alpha^{n - 2} = \frac{2}{\sqrt{5} + 1} = 0.618..$, which is less than $1$.
+For $n = 2$, $\alpha^{n - 2} = 1$, which is less than $2$.
+Now, suppose that for all $k$ in  $n \geq k \geq 1$, $F_k \geq \alpha^{n - 2}$.
+% By the formula of the fibonacci numbers, $F_{n + 1} = F_n + F_{n - 1}$.
+% From this, it must be shown that $F_n + F_{n -1} \geq \alpha_{n - 2}$.
+Using the induction hypothesis and the formula for the fibonacci numbers, $F_{n + 1} = F_n + F_{n - 1} \geq \alpha^{n - 2} + \alpha^{n - 3}$. 
+Consider $\alpha = (1 + \sqrt{5}/2)$. $\alpha^2 = \frac{6 + 2*\sqrt{5}}{4} = \frac{2 + 1 + \sqrt{5}/2} = 1 + \alpha$.
+From above we can now say $F_{n + 1} \geq \alpha^{n - 3} * (\alpha + 1) = \alpha{n - 3} * \alpha^2 = \alpha{n - 1}$.
+Thus, since $F_{n + 1} \geq \alpha{n - 1}$, by the principle of complete mathematical induction, the hypothesis holds.
+\end{proof}

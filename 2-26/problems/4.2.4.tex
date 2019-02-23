@@ -6,5 +6,11 @@ Let $A$ be a set. Show that $\mathcal{P}(A)$ need not be totally ordered under t
 
 \part 
 
+\begin{theorem}
+$\mathcal{P}(A)$ is not totally ordered under the relation $\subseteq$.
+\end{theorem}
+
+\begin{proof}
 Recall that a set $A$ is said to be totally ordered if it has a relation which is anti-symmetric, transitive, and satisfies the "connex property": $a ~ b$ or $b ~ a$ for any $a, b$ in the set $A$. While $\subseteq$ satisfies anti-symmetry and transitivity for $\mathcal{P}(A)$, it does not satisfy the connex property. For instance, the powerset of $\{0, 1\}$ contains the elements $\{0\}$ and $\{1\}$. Let these be the variables $a$ and $b$ in the connex property, and it is clear that it is
 not satisfied (because $\{0\} \not\subseteq \{1\}$ and $\{1\} \not\subseteq \{0\}$).
+\end{proof}
