@@ -1,8 +1,21 @@
 \problem{4.3.10}
 
-Let the set $A$ be $\{1..6\}$. Suppose a relation $r$ is defined as $\{(1, 1), (2, 2), (2, 3), (2, 5), (3, 5), (4, 2), (4, 3), (4, 5), (5, 2), (5, 3), (5, 5)\}$
+Let the set $A$ be $\{1..6\}$. Suppose a relation $r$ is defined as: \\
+$\{(1, 1), (2, 2), (2, 3), (2, 5), (3, 5), (4, 2), (4, 3), (4, 5), (5, 2), (5, 3), (5, 5)\}$ \\
 For each $\alpha \in A$, find $T_{\alpha}$, and then find $\Omega_r$ (Short answer only).
 
 \solution
 
 \part 
+
+Consider each element in $A$:
+\begin{itemize}
+    \item $T_1 = \{1\}$ 
+    \item $T_2 = \{2, 3, 5\}$
+    \item $T_3 = \{5\}$
+    \item $T_4 = \{2, 3, 5\}$
+    \item $T_5 = \{2, 3, 5\}$
+    \item $T_6 = \varnothing$
+\end{itemize}
+
+Thus, $\Omega_r$ is the set $\{\{1\}, \{5\}, \{2, 3, 5\}, \varnothing\}$.

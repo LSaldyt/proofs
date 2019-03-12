@@ -1,9 +1,24 @@
 \problem{4.7}
 
-Is it possible for a partially ordered set to have both a least element and a minimal element that is \emph{not} a least element.
+Is it possible for a partially ordered set to have both a least element and a minimal element that is \emph{not} a least element?
 
 \solution
 
 \part 
 
-Solution
+\begin{theorem}
+It is not possible for a partially ordered set to have both a least element and a minimal element that is \emph{not} a least element.
+\end{theorem}
+
+\begin{proof}
+Proceeding by contradiction, consider a poset $A, \leq$ which has a least element, $a$. 
+Least simply means that for all elements $x \in A$, $a \leq x$.
+So, suppose there there existed a minimal element, call it $b$, which was \emph{not} a least element.
+The definition of minimal is weaker, and simply states that $b$ is not greater than (i.e. $\leq$) any element in $A$.
+This scenario is not possible, by cases:
+\begin{enumerate}
+    \item Either the minimal element $b$ is not related to the least element, $a$, and thus $a$ is not a least element.
+    \item Or, $b$ is equal to $a$, in which case $b$ is a least element.
+\end{enumerate}
+Since both cases lead to a contradiction, the theorem holds.
+\end{proof}

@@ -3,11 +3,16 @@
 Consider $\mathcal{P}(\mathcal{N})$ under the partial ordering $\subseteq$.
 \begin{enumerate}
     \item Give an example of a nonempty subset of $\mathcal{P}(\mathcal{N})$ with no greatest element.
-    \item Let $K = \{\{2, 3, 4, 12\}, \{3, 6, 9, 12\}, \{1, 2, 3, 4,4 5, 6, 7, 8, 9, 10, 11, 12\}\}$. Find three upper bounds for $K$ and three lower bounds for $K$ in $\mathcal{P}(\mathcal{N})$. Does $K$ have a least upper bound? Does $K$ have a greatest upper bound?
-    \item Let $X$ be any set. Suppose that $K$ is a nonempty subset of $\mathcal{P}(\mathcal{N})$, ordered under $\subseteq$. How would you construct the least upper bound of $K$? How about the greatest lower bound of $K$?
+    \item Let $K = \{\{2, 3, 4, 12\}, \{3, 6, 9, 12\}, \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}\}$. Find three upper bounds for $K$ and three lower bounds for $K$ in $\mathcal{P}(\mathcal{N})$. Does $K$ have a least upper bound? Does $K$ have a greatest upper bound?
+    \item Let $X$ be any set. Suppose that $K$ is a nonempty subset of $\mathcal{P}(\mathcal{X})$, ordered under $\subseteq$. How would you construct the least upper bound of $K$? How about the greatest lower bound of $K$?
 \end{enumerate}
-
 \solution
 
 \part 
+
+\begin{enumerate}
+    \item The set $\{\{1\}, \{2\}\}$, which is a subset of the powerset of the natural numbers, has no greatest element because the two inner sets are not comparable (They only share the null set as an element, so neither is a subset of the other).
+    \item Three upper bounds are $\{1,2..12\}, \{1,2..13\}, and \mathcal{Z}$. Three lower bounds are $\varnothing, \{3\}$, and $\{12\}$. There exists a least upper bound, namely $\{1,2..12\}$, but no greatest lower bound, because the set of lower bounds has no greatest element because its items are not comparable (as in question 1).
+    \item The least upper bound would be constructed by creating a set of all upper bounds, and then attempting to find the least element in that set. Similarly, the greatest lower bound would be constructed by creating a set of all lower bounds, and attempting to find the greatest element in that set. However, because the relation is $\subseteq$, $X$ in general will have no greatest lower bound, unless $X$ is the null set, or a set of one element.
+\end{enumerate}
 

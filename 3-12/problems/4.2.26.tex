@@ -1,9 +1,19 @@
 \problem{4.2.26}
 
-Let $A$ be a partially ordered set that has the least upper bound property. Then every nonempty subset of $A$ that is bounded below has a greatest upper bound. (Or: Every partially ordered set with the least upper bound property also has the greatest lower bound property). (Hint: Use Lemma 4.2.25).
+Prove the following. Let $A$ be a partially ordered set that has the least upper bound property. Then every nonempty subset of $A$ that is bounded below has a greatest lower bound. (Or: Every partially ordered set with the least upper bound property also has the greatest lower bound property). (Hint: Use Lemma 4.2.25).
 
 \solution
 
 \part 
+\begin{theorem}
+Every non-empty subset of $A$ that is bounded below (has a lower bound) has a greatest lower bound.
+\end{theorem}
 
-Solution
+\begin{proof}
+    By the least upper bound property it is known that every non-empty subset $K$ of a poset $A$ with an upper bound will have a least upper bound in $A$, because there is a least element in the set of upper bounds, which are known to exist.
+By lemma 4.2.25, the least upper bound of the set of lower bounds of $K$, is the greatest lower bound of $K$.
+Suppose $K$ is bounded below, i.e. the set of lower bounds, $L_k$, is non-empty.
+Just like $K$, $L_k$ is a non-empty subset of $A$, and will itself be bounded, and is guaranteed to have a least upper bound, because the poset $A$ has the least upper bound property.
+Then, by lemma 4.2.25, this least upper bound is the greatest lower bound of $K$.
+\end{proof}
+

@@ -6,13 +6,26 @@ Show that the following relations $r$ on the specified set $S$ are equivalence r
 \item By showing directly that $r$ is reflexive, symmetric, and transitive.
 \end{itemize}
 
-\begin{enumerate}
-    \item $S = \{p : p \text{ is a person in Ohio}\}$. A rel B is A and B were born in the same year.
-    \item $S = \mathcal{Z}$. a rel b is abs(a) == abs(b)
-\end{enumerate}
-
 \solution
 
 \part 
 
+\begin{enumerate}
+    \item $S = \{p : p \text{ is a person in Ohio}\}$. A rel B represents that person A and person B were born in the same year. \\
+        Let $\Omega_r$ be the set of equivalence classes, a collection of subsets of $S$ associated with relation $r$, where each $T_\alpha$ in $\Omega_r$ is the set of relatives of $\alpha$. 
+        Years are natural numbers with a lower bound. Thus, there is a finite number of them. 
+        In each year, if person A is born in the same year as person B, then the reverse is also true (Thus $r$ is symmetric).
+        Thus, each year has a set of people born in that year, and this set is an equivalence class $T_\alpha$.
+        Each $T_\alpha$ is disjoint from other $T_\beta$s, and covers all people because a person must be born in a particular year, and only one particular year.
+        This shows that the equivalence classes partition $S$.
+        Now, $r$ is also reflexive and transitive because each person is born in the same year as themself, and if person $a$ is born in the same year as person $b$ and person $b$ is born in the same year as person $c$, then the people $a, b$ and $c$ (of interest: $a$ and $c$) are all born in the same year.
+        So, $r$ is symmetric, reflexive, and transitive.
+    \item $S = \mathcal{Z}$. a rel b represents that $\abs{a} = \abs{b}$ \\
+        It is only true that $\abs{a} = \abs{b}$ when either $a = b$ or $a = -b$ (or $-a = b$, though $a$ and $b$ are general). So, to start with, this is actually a combination of two equivalence relations.
+        Consider the equivalence classes $T_\alpha$. For any element $a$ in $S$, it is known that $T_\alpha$ includes two elements, and no others: $a$ and $-a$.
+        $r$ is symmetric because the underlying relation $=$ is symmetric.
+        Because $r$ is symmetric, $T_\alpha$ is disjoint from other equivalence classes, but in total $\Omega_r$ includes all elements in $S$.
+        This shows that the equivalence classes partition $S$.
+        Now, $r$ is also reflexive and transitive because each number is equal to itself, regardless of sign, and the transitive property holds on the underlying equality relationship.
+\end{enumerate}
 
