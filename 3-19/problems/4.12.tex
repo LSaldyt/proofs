@@ -1,0 +1,24 @@
+\problem{4.12}
+
+Let $A$ be a partially ordered set. Suppose $X \subseteq Y \subseteq A$.
+
+\begin{enumerate}
+\item Assuming that all the least upper bounds and greatest upper bounds exist, prove that $glb(Y) \leq glb(X) \leq lub(X) \leq lub(Y)$
+\item Find two subets $X$ and $Y$ of $\mathcal{R}$ for which $X$ is a proper subset of $Y$ and $glb(Y) = glb(X)$ and $lub(X) = lub(Y)$.
+\end{enumerate}
+
+\solution
+
+\part 
+
+\begin{theorem}
+Since $X$ is a subset of $Y$, its greatest and least values are, at most/least the greatest and least values of $Y$
+\end{theorem}
+\begin{proof}
+Consider the $glb$ of $X$. Since $X$ is a subset of $Y$, this $glb$ necessarily exists in $Y$. However, since $Y$ possibly has more elements than $X$, there could exist an arbitrary element in $Y$ which makes a $glb$ which is possibly smaller than the $glb$ in $X$. However, no greater $glb$ could exist, because it would not include $X$'s $glb$.
+Consider the $lub$ of $X$. Since $X$ is a subset of $Y$, this $lub$ necessarily exists in $Y$. However, since $Y$ possibly has more elements than $X$, there could exist an arbitrary element in $Y$ which makes a $lub$ which is possibly greater than the $lub$ in $X$. However, no smaller $lub$ could exist, because it would not include $X$'s $lub$.
+\end{proof}
+
+\part
+
+Simply create an interval, $Y$, and a second interval, $X$, which is equal to $Y$, except that middle portions of the interval are missing. For instance, Let $Y = [0.0, 1.0]$ and $X = [0.0, 0.5) \cup (0.5, 1.0]$.

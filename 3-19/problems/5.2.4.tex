@@ -1,0 +1,22 @@
+\problem{5.2.4}
+
+Suppose that $f \colon A \to B$ and $g \colon B \to C$ are functions. Give proofs/counterexamples. 
+\begin{enumerate}
+    \item If $g \circ f$ is one-to-one, must $f$ be one-to-one?
+    \item If $g \circ f$ is one-to-one, must $g$ be one-to-one?
+    \item If $g \circ f$ is onto, must $f$ onto?
+    \item If $g \circ f$ is onto, must $g$ onto?
+\end{enumerate}
+
+\solution
+
+\part 
+If $g \circ f$ is one-to-one, $f$ must be one-to-one. 
+Suppose $f$ is not one-to-one, i.e. there is some $b$ in the codomain of $f$ which is mapped to by two values, $x$ and $y$. Then, $g$ may map $b$ to any other value, call it $c$. This implies that $f \circ g$ maps to $c$ by both $x$ and $y$, and thus $g \circ f$ is not one-to-one. By contradiction, $f$ must be one-to-one.
+\part
+If $g \circ f$ is one-to-one, $g$ may be one-to-one, but does not have to be.
+Suppose $g$ is not one-to-one, i.e. there is some $b$ in the codomain of $g$ which is mapped to by two values, $x$ and $y$. If both $x$ and $y$ are in $B$, then there is a problem and $g \circ f$ is not one-to-one. If they are not, then everything is nominal. Thus, in some cases there is a contradiction, and it is implied that $g$ must be one-to-one.
+\part
+If $g \circ f$ is onto, $f$ must be onto. Suppose $f$ is not onto, i.e. there is some value $b$ in the codomain which it cannot reach from some $x$. Since $b$ is not reachable, $g$ cannot use it to reach an arbitrary value $c \in C$, and thus $g \circ f$ would not be onto. By contradiction, $f$ must be onto if $g \circ f$ is onto.
+\part
+If $g \circ f$ is onto, $g$ must be onto. Suppose $g$ is not onto, i.e. there is some value $c$ in the codomain which it cannot reach from some $x$. Since $c$ is not reachable from $g$ from any starting value, $g \circ f$ is not onto. By contradiction, $g$ must be onto if $g \circ f$ is onto.
