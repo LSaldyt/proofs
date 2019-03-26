@@ -1,0 +1,35 @@
+\problem{5.3.12}
+
+Let $f \colon A \to B$ be a function.
+\begin{enumerate}
+    \item Give an example of a function $f \colon A \to B$ and two subsets $X$ and $Y$ of $A$ such that $f(X\cap Y) \neq f(X)\cap f(Y)$
+    \item Show that $f(\cap_{\alpha \in \Lambda} T_\alpha) = \cap_{\alpha \in \Lambda} f(T_\alpha)$ for all choices of $f$ if and only if $f$ is one-to-one.
+\end{enumerate}
+
+\solution
+
+\part 
+
+Consider the sets $X = \{1\}, Y = \{2\}$, and $f = {(1, 1,), (2, 1)}$. Then, $f(X\cap Y) = \varnothing$, but $f(X) \cap f(Y) = \{1\}$.
+
+\part
+
+\begin{theorem}
+Given a function $f$, the intersection of the images of all subsets of $A$ is equal to the image of the intersection of all subsets of $A$ if and only if $f$ is one-to-one.
+\end{theorem}
+
+\begin{proof}
+Suppose the condition of the contrapositive, namely that $f$ is not one-to-one, i.e. that for some $b$ in the codomain, there are two distinct values $x$ and $y$ that map to another distinct value, $b$.
+Now consider any subset $Y$, containing $y$ and any other subset $X$, containing $x$, where $y$ is not in $X$ and $x$ is not in $Y$. 
+By definition, the intersection of $X$ and $Y$ will contain neither $x$ nor $y$.
+However, since $x$ and $y$ both map to $b$, $b$ is an element of the intersection of the images on $X$ and $Y$.
+Now recall that $b \neq x$ and $b \neq y$, so that the intersection of the images of $X$ and $Y$ is not equal to the image of the intersection of $X$ and $Y$.
+Thus, by contrapositive, if $f$ is one-to-one, then the intersection of the images of all subsets of $f$ is equal to the image of the intersection of all subsets.
+
+Now suppose the opposite direction, that the intersection of the images of $X$ and $Y$ is not equal to the image of the intersection of $X$ and $Y$. Call the intersection of images $C$ and the image of intersections $D$.
+This means, by definition, that, without loss of generality between $C$ and $D$, there is some $c \in C$ and $c \not\in D$, and this $c$ is reachable by $f(x) | x \in A$.
+However, the only way for $c$ to be in $C$ and not in $D$ is if $f$ is not one-to-one.
+This is because either $c$ is in the intersection of the images or the image of the intersections, but not both.
+This is possible in the case where $c$ is in the interesection of the images, but not the image of the intersections, when $x$ and $y$ map onto the same value, $b$, and thus $f$ is not one-to-one.
+Thus, by contrapositive, if the intersection of the images of all subsets of $f$ is equal to the image of the intersection of all subsets, then $f$ is one-to-one.
+\end{proof}

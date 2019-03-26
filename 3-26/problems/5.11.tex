@@ -1,0 +1,32 @@
+\problem{5.11}
+
+Let $f \colon A \to B$ be a function. Let $X$ and $Y$ be subsets of $A$, and $U$ and $V$ be subsets of $B$.
+\begin{enumerate}
+\item Prove that $f^{-1}(U) \ f^{-1}(V) = f^{-1}(U \ V)$.
+\item Prove that $f(X) \ f(Y) \subseteq f(X \ Y)$.
+\end{enumerate}
+
+\solution
+
+\part 
+
+\begin{theorem}
+    The difference of the preimages of $U$ and $V$ is equal to the preimage of the difference of $U$ and $V$.
+\end{theorem}
+\begin{proof}
+    The difference of the preimages contains all elements $x$ that reach $U$ but do not reach $V$. Similarly, the preimage of the difference of $U$ and $V$ contains all elements $x$ which reach $U$, but not $V$. Thus, these two sets are the same.
+\end{proof}
+
+\part
+
+\begin{theorem}
+    The difference of images on $X$ and $Y$ is a subset of the image on the difference of $X$ and $Y$.
+\end{theorem}
+
+\begin{proof}
+    Consider the difference of images on $X$ and $Y$ (Call this $A$).
+    This set consists of all elements reached by elements in $X$, but not reached by elements in $Y$.
+    The image on the difference of $X$ and $Y$ ($B$) also consists of all elements which $X$ maps to, and so every element of $A$ is in $B$, i.e. $A \subseteq B$.
+\end{proof}
+
+

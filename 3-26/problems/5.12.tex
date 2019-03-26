@@ -1,0 +1,24 @@
+\problem{5.12}
+
+Let $f \colon A \to B$ be a function. Consider sets of the form $f(f^{-1}(S))$.
+
+\begin{enumerate}
+    \item Show that for all subsets $S$ of $B$, $f(f^{-1}(S)) \subseteq S$.
+    \item Give an example to show that $f(f^{-1}(S))$ need not be equal to $S$.
+    \item Complete and prove the following statement: $f(f^{-1}(S)) = S$ for all subsets $S$ of $B$ if and only if..
+\end{enumerate}
+
+\solution
+
+\part 
+
+$f$ maps $A \to B$, and $f^{-1}$ maps $B \to A$, then for some subset $S$ of $B$, $f^{-1}$ maps $S$ to $T \subseteq A$, and similarly $f$ maps $T \to V \subseteq B$.
+However, $V$ is a subset of $S$, because $V$ consists of all elements which follow the form $f(f^{-1}(x))$, where $x$ is originally from $S$. $f(f^{-1}(x))$ cannot map onto an element not in $S$, because the "middle" set, i.e. $f^{-1}(S)$ is mapped to from $S$, and so the image of this set must be a subset of $S$.
+
+\part
+
+Consider $f(x) = x^2$ defined on the integers. Both $2$ and $-2$ map to $4$, but the inverse does not map back to $-2$.
+
+\part
+
+\ldots If and only if $f$ is one-to-one and onto.

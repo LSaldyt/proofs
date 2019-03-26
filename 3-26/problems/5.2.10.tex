@@ -1,0 +1,16 @@
+\problem{5.2.10}
+
+\begin{theorem}
+Suppose that $h \colon A \to B$ and $k \colon B \to C$ are functions. If $h$ and $k$ are both one-to-one and onto, $(k \circ h)^{-1}$ is a function and $(k \circ h)^{-1} = h^{-1} \circ k^{-1}$.
+\end{theorem}
+
+\solution
+
+\part 
+\begin{proof}
+First, since $h$ and $k$ are both one-to-one and onto, then $k \circ h$ is also one-to-one and onto, by a previously proven theorem.
+Similarly, if any function $f$ is one-to-one and onto, then $f^{-1}$ is also a function, which is one-to-one and onto.
+Thus, $(k \circ h)^{-1}$ is a function, which is one-to-one and onto.
+Now, $k \circ h$ will map $A$ to $C$. $h^{-1}$ maps $B \to A$ and $k^{-1}$ maps $C \to B$. Thus, $k^{-1} \circ h^{-1}$ maps $C \to A$, as does $(k \circ h)^{-1}$.
+Also, both $(k \circ h)^{-1}$ and $h^{-1} \circ k^{-1}$ are equal to $h^{-1}(k^{-1}(x))$ (The first instance is such because it is the inverse of $k(h(x))$, the second case is just a re-writing). Thus, they are equal.
+\end{proof}
