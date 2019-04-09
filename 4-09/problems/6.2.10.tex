@@ -1,0 +1,36 @@
+\problem{6.2.10}
+
+Prove the following about the partial ordering on $\mathcal{N}$.
+\begin{enumerate}
+\item Prove that $\mathcal{N}$ is partially ordered under the relation $|$.
+\item Is $|$ a \emph{total} order on $\mathcal{N}$? Explain.
+\item Draw a lattice diagram the depicts the order $|$ on the set $\{1,2..15\}$.
+\item Does $\{2, 3, 4, 5..\}$ have any minimal or maximal elements with respect to the order $|$?
+\end{enumerate}
+
+\solution
+
+\part 
+A partial ordering must be reflexive, anti-symmetric, and transitive.
+$|$ is reflexive, because any number (say, $x \in \mathcal{N}$) divides itself into one and itself: $x = x * 1$.
+$|$ is anti-symmetric, because for natural numbers $a$, $b$, $x$ and $y$ if $x | y$ and $y | x$, $x$ and $y$ must be equal. This can be seen by supposing to the contrary that $x | y$ and $y | x$ and $x \neq y$.
+In this case, $y = xa$ and $x = yb$, so $y = y * a * b$. Both $a$ and $b$ must be $1$, or this leads to a contradition, but for $a$ and $b$ to be $1$, $x$ must equal $y$.
+$|$ is transitive, i.e. for natural numbers $a,b,c,x,y$ if $a | b$ and $b | c$, then $a | c$. This can be seen when written explicitly: $b = ax$ and $c = by$, so $c = axy$. Let $z = xy$, and now $c = az$, so $a$ divides $c$.
+Thus, $|$ is a partial ordering on $N$.
+\part
+No, because there are some numbers which do not divide others, and a total ordering requires the relation to exist between arbitrary elements. For instance, $3$ does not divide $5$, because $5$ is prime.
+\part
+\begin{verbatim}
+       8 4-12
+       |/ /  \
+ 15 10 | 6 9 | 14
+ | \| \|/|/  |/|
+(3) 5  | 3---| 7 11 13
+       |     |
+       |     |
+       2------
+(all divided by)
+1
+\end{verbatim}
+\part
+$1$ is minimal (and least) because it divides everything, but there is no maximal element because the set is infinite.

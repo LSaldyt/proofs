@@ -1,0 +1,42 @@
+\problem{6.1.4}
+
+Use the well-ordering of $\mathcal{N}$ (Every non-empty set of natural numbers contains a least element) to prove the following:
+
+\begin{enumerate}
+    \item Every nonempty subset of $\mathcal{Z}$ that has a lower bound has a least element.
+    \item Every nonempty subset of $\mathcal{Z}$ that has a upper bound has a greatest element.
+\end{enumerate}
+
+\solution
+
+In each of these solutions, the subset on $\mathcal{Z}$ must be converted to a subset of $\mathcal{N}$.
+
+\part 
+
+\begin{proof}
+Call this lower bounded set $A$, with lower bound $b$.
+Create a new set $B = \{x - b + 1 | x \in A\}$, which is a subset of the natural numbers (because it has lower bound $c = b - b + 1 = 1$), and thus now has a least element, by the well ordering principle.
+Let $y \in B$, so that $y = x - b + 1$ for $x \in A$. 
+Since $b$ is a lower bound for $A$, $x \geq b$, $x - b + 1\geq 1$, so $y \geq 1$, and thus $y \in \mathcal{N}$.
+Now observe that $B$ is not empty. Since $A \neq \varnothing$, it contains at least one element, $x_0$. 
+Then $y_0 = x_0 - b + 1 \in B$, so $B \neq \varnothing$.
+By the well ordering principle, $B$ has least element $y_1 = x_1 - b + 1$. 
+Consider an arbitrary $x \in A$. Then, $x - b + 1 \in B$, $y_1$ is the least element of $B$, $x -b + 1 \geq y_1 = x_1 - b + 1$. 
+Add $b - 1$ to both sides, so that $x \geq x_1$. 
+Since $x$ is arbitrary, $x_1$ is the least element of $A$
+\end{proof}
+
+\part
+
+\begin{proof}
+Call this upper bounded set $S$, with upper bound $s_u$.
+Create a new set, $T = \{-s + s_u + 1\}$, which is a subset of the natural numbers.
+Consider that $s \in S$ is less than or equal to $s_u$, so $-s_u \leq -s$.
+Then $-s_u + s_u + 1 \leq -s + s_u + 1$, so $t = -s + s_u + 1 \geq 1$, and $T$ is a subset of the natural numbers.
+Observe that $T$ is not empty, because $S$ is not empty (it contains some $s_0$), and then $t_0 = -s_0 + s_u + 1$ and $t_0$ is in $T$.
+Since $t_1$ is a least element in $T$ (by the well ordering principle), and $t_1 = -s_1 + s_u + 1$ for some $s_1$.
+So $-s_1$ is a least element of $S$, and $s_1$ is a greatest element:
+Let $s \in S$. Then $-s + s_u + 1 \in T$. $t_1$ is the least element of $T$, so $-s + s_u + 1 \geq t_1$. 
+Also, $t_1 = -s_1 + s_u + 1$, so $-s + s_u + 1 \geq -s_1 + s_u + 1$
+This implies that $s \leq s_1$, and thus $s_1$ is a greatest element of $S$, since $s$ is arbitrary.
+\end{proof}

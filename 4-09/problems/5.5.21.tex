@@ -1,0 +1,26 @@
+\problem{5.5.21}
+
+Let $A$ be a set, and $(s_i)$ be a sequence in $A$.
+\begin{enumerate}
+    \item If ($s_i$) is constant, every subsequence of ($s_i$) is constant.
+    \item If ($s_i$ has distinct terms, then every subsequence of ($s_i$) has distinct terms.
+\end{enumerate}
+
+\solution
+
+\part 
+
+\begin{proof}
+Suppose there existed a non-constant subsequence of $s_i$, call it $s_{a_k}$. 
+Then, by definition, $s_{a_i} \neq s_{a_j}$ for distinct natural numbers $i$ and $j$.
+Evaluate $a_i$, and $a_j$, which will be natural numbers. Call them $x$ and $y$ respectively.
+This means that $s_x \new s_y$ for distinct $x$ and $y$ ($x$ and $y$ must be distinct because, if they were not, then $s_{a_i}$ would equal $s_{a_j}$).
+This leads to a contradiction, namely that $s_x \neq s_y$ for distinct $x$ and $y$, or the original subsequence would be constant.
+By contradiction, every subsequence of a constant sequence must also be constant.
+\end{proof}
+
+\begin{proof}
+Suppose that there existed a non-distinct subsequence of $s_i$. Call this subsequence $s_{a_k}$.
+By negating the definition of distinct, $s_{a_i} = s_{a_j}$ for some distinct $i$ and $j$.
+Evaluate $a_i$ and $a_j$ to natural numbers $x$ and $y$, so that $s_x = s_y$ for distinct $x$ and $y$. This is a contradiction with the fact that $s_i$ is distinct, so it is not possible to have a constant subsequence of a distinct sequence.
+\end{proof}

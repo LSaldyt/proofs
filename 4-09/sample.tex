@@ -1,0 +1,72 @@
+% Homework template created by Jonathan Wheeler
+% for use at Stanford University.
+% Edited by Lucas Saldyt
+%
+% Adapted from a jhwhw.cls file I found on
+% github.
+%
+% In sublime, use Cmd-L, backspace to 
+% clear auxiliary files 
+% Better yet, don't use sublime.
+
+% \usepackage{amsthm}
+
+\documentclass[notitlepage]{homework}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[parfill]{parskip}
+\usepackage{minted}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[euler]{textgreek}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{subcaption}
+
+\pgfplotsset{compat=1.13}
+\usetikzlibrary{decorations.pathmorphing,shapes}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{calc}
+
+\newcommand{\AssignmentName}{MAT 300 4-09 HW}
+
+\author{Lucas Saldyt}
+\title{\AssignmentName}
+
+
+\begin{document}
+% Used in syntax highlighting
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\begin{titlepage}
+	\begin{center}
+		{\Large \AssignmentName}
+		
+		\bigskip
+
+		\begin{tabular}{rl}
+			ID: & 1213399809 \\ % TODO
+            Name: & Lucas Saldyt (lsaldyt@asu.edu) \\ % TODO
+			Collaborators: & $\varnothing$
+		\end{tabular}
+
+		\bigskip
+
+	\end{center}
+
+	\toccontents
+
+	\vfill
+
+\end{titlepage}
+
+%\include{problems/5.2.10}
+\include{problems/5.5.21}
+\include{problems/6.1.4}
+\include{problems/6.2.10}
+\include{problems/6.2.3}
+\include{problems/6.2.8}
+
+\end{document}
